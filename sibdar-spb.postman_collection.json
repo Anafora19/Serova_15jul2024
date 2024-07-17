@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "745fddad-30d8-4a35-924d-8e1ae0a526e3",
+		"name": "sibdar-spb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32022118"
+	},
+	"item": [
+		{
+			"name": "Добавление товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=mH7zR242NSAxBndZvdCvScbU6GNRlZkg; basketor=203895",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Length",
+						"value": "92",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Host",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"idCookie\":\"203895\",\"idProd\":\"204\",\"type\":\"add\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.sibdar-spb.ru/ajax/basketOrder.php",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sibdar-spb",
+						"ru"
+					],
+					"path": [
+						"ajax",
+						"basketOrder.php"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение количества товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Server\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"idCookie\":\"203895\",\"idProd\":204,\"type\":\"plus\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.sibdar-spb.ru/ajax/basketOrder.php",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sibdar-spb",
+						"ru"
+					],
+					"path": [
+						"ajax",
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Date\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"idCookie\":\"203895\",\"idProd\":204,\"type\":\"delete\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.sibdar-spb.ru/ajax/basketOrder.php",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sibdar-spb",
+						"ru"
+					],
+					"path": [
+						"ajax",
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
